@@ -31,6 +31,12 @@ public class Gladiator {
         }
     }
 
+    public void increaseRage(){
+        if(this.rage <= 100){
+            this.rage = Integer.min(100, this.rage + 20);
+        }
+    }
+
     public void heal(){
         if (this.rage >= 10) {
             this.health = Integer.min(100, this.health + 15);
@@ -41,8 +47,8 @@ public class Gladiator {
 
     }
 
-//will return True if dead or False if not
     public boolean isDead(){
         return this.health <= 0;
     }
 }
+
